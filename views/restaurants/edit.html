@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="/restaurants">Saved Shows</a>
+      <a href="/restaurants/new">Add A Show</a>
+      <a href="/users/logout">Log Out</a>
+    </nav>
+    <h2>Edit {{name}}</h2>
+    <form id='edit-restaurant'>
+      <input type="hidden" value="{{id}}" id="id-input" />
+      <label for="name-input">Name</label>
+      <input id="name-input" value="{{name}}" />
+      <label for="image-input">Image URL</label>
+      <input id="image-input" value="{{image}}" />
+      <label for="network-input">Network</label>
+      <input id="network-input" value="{{network}}" />
+      <label for="summary-input">Network</label>
+      <textarea id="summary-input">{{summary}}</textarea>
+      <button id="edit-button">Submit</button>
+      <a href="/restaurants/{{id}}" class="fake-button">Cancel</a>
+    </form>
+  </div>
+</body>
+</html>
